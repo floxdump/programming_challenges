@@ -16,7 +16,7 @@ public:
     : current_time{0}
     {}
     
-    // Compose a new tweet.
+    // Compose a new tweet
     void postTweet(int userId, int tweetId)
     {
         // First tweet of userId. We should follow oneself 
@@ -25,7 +25,6 @@ public:
             follow(userId, userId);
         }
         ++current_time;
-        //tweets[userId].push_back(std::make_pair(tweetId, current_time));
         tweets[userId].emplace_back(tweetId, current_time);
     }
     
